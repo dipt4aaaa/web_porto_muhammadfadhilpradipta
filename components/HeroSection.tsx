@@ -35,10 +35,12 @@ export function HeroSection({ portfolio }: { portfolio: PortfolioData }) {
                 View Projects
               </a>
               <a
-                href={`mailto:${portfolio.contact.email}`}
+                href="https://drive.google.com/drive/folders/1F3QtnhU-q_boceDqPMw3-yb8qnqUllkh?usp=sharing"
+                target="_blank"
+                rel="noreferrer"
                 className="rounded-full border border-slate-700 bg-slate-900 px-5 py-3 text-sm font-semibold text-slate-100 transition hover:border-violet-500 hover:text-violet-200"
               >
-                Let&apos;s Connect
+                My CV
               </a>
             </div>
 

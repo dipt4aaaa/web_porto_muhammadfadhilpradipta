@@ -7,6 +7,12 @@ import dynamicBerTopicImage from '../assets/dynamicbertopic.png';
 import ztnaImage from '../assets/ztna.png';
 import damagedRoadImage from '../assets/damaged road.png';
 import humanPoseImage from '../assets/human pose.png';
+import awsCertificationImage from '../assets/Sertif Aws.png';
+import businessPlanImage from '../assets/SertifBusinessPlan.png';
+import googleAnalyticsImage from '../assets/SertifGoogle.png';
+import infografisAwardImage from '../assets/SertifInfografis.png';
+import pythonVisualizationImage from '../assets/SertifVisualisasiData.png';
+import mlBeginnerImage from '../assets/Sertifmachinelearning.png';
 
 export type ContactInfo = {
   phone: string;
@@ -41,6 +47,21 @@ export type Project = {
   liveUrl?: string;
 };
 
+export type Certification = {
+  title: string;
+  issuer: string;
+  date: string;
+  image: StaticImageData;
+};
+
+export type Award = {
+  title: string;
+  issuer: string;
+  date: string;
+  description: string;
+  image: StaticImageData;
+};
+
 export type PortfolioData = {
   name: string;
   profileImage: StaticImageData;
@@ -59,8 +80,8 @@ export type PortfolioData = {
     tools: string[];
     languages: string[];
   };
-  certifications: string[];
-  awards: string[];
+  certifications: Certification[];
+  awards: Award[];
 };
 
 export const portfolio: PortfolioData = {
@@ -186,13 +207,47 @@ export const portfolio: PortfolioData = {
     languages: ['Indonesia', 'English'],
   },
   certifications: [
-    'AWS Academy Graduate - AWS Academy Data Engineering – Amazon Web Services (May 2025)',
-    'Google Analytics Certification (2026) – Google Digital Academy / Skillshop (Aug 2026)',
-    'Belajar Machine Learning untuk Pemula – Dicoding Indonesia (Oct 2025)',
-    'Belajar Dasar Visualisasi Data & Pemrograman dengan Python – Dicoding Indonesia (Jul 2025)',
+    {
+      title: 'AWS Academy Graduate - AWS Academy Data Engineering',
+      issuer: 'Amazon Web Services',
+      date: 'May 2025',
+      image: awsCertificationImage,
+    },
+    {
+      title: 'Google Analytics Certification (2026)',
+      issuer: 'Google Digital Academy / Skillshop',
+      date: 'Aug 2026',
+      image: googleAnalyticsImage,
+    },
+    {
+      title: 'Belajar Machine Learning untuk Pemula',
+      issuer: 'Dicoding Indonesia',
+      date: 'Oct 2025',
+      image: mlBeginnerImage,
+    },
+    {
+      title: 'Belajar Dasar Visualisasi Data & Pemrograman dengan Python',
+      issuer: 'Dicoding Indonesia',
+      date: 'Jul 2025',
+      image: pythonVisualizationImage,
+    },
   ],
   awards: [
-    'Finalist in Infographic Poster (4C National Competition) – FILKOM UB (Nov 2024)',
-    '2nd Place Winner – International Business Plan Competition (ECOFEST 2024) – FEB UPNVJ (Feb 2024)',
+    {
+      title: 'Finalist in Infographic Poster (4C National Competition)',
+      issuer: 'FILKOM UB',
+      date: 'Nov 2024',
+      description:
+        'Selected as a national finalist by designing a data-driven infographic poster that analyzed industrial workplace accident trends in Indonesia using clustering for geographical mapping and time-series modeling for 5-year fatality forecasting, while proposing an AI-driven CCTV system for real-time PPE detection and hazard prevention.',
+      image: infografisAwardImage,
+    },
+    {
+      title: '2nd Place Winner – International Business Plan Competition (ECOFEST 2024)',
+      issuer: 'FEB UPNVJ',
+      date: 'Feb 2024',
+      description:
+        'Secured 2nd place among top competing teams by conceiving and developing FixFlare, an innovative automotive service business plan featuring an online mechanic booking platform with UI/UX prototypes designed to connect vehicle owners with certified local mechanics.',
+      image: businessPlanImage,
+    },
   ],
 };

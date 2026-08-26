@@ -3,6 +3,7 @@ import { ContactSection } from '../components/ContactSection';
 import { ExperienceSection } from '../components/ExperienceSection';
 import { HeroSection } from '../components/HeroSection';
 import { ProjectsSection } from '../components/ProjectsSection';
+import { RecognitionSection } from '../components/RecognitionSection';
 import { portfolio } from '../data/portfolio';
 
 export default function Page() {
@@ -13,6 +14,7 @@ export default function Page() {
         <AboutSection portfolio={portfolio} />
         <ExperienceSection portfolio={portfolio} />
         <ProjectsSection projects={portfolio.projects} />
+        <RecognitionSection portfolio={portfolio} />
         <ContactSection portfolio={portfolio} />
       </div>
     </main>
