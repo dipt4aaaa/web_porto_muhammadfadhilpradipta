@@ -1,4 +1,5 @@
 import { AboutSection } from '../components/AboutSection';
+import { Chatbot } from '../components/Chatbot';
 import { ContactSection } from '../components/ContactSection';
 import { ExperienceSection } from '../components/ExperienceSection';
 import { HeroSection } from '../components/HeroSection';
@@ -17,6 +18,7 @@ export default function Page() {
         <RecognitionSection portfolio={portfolio} />
         <ContactSection portfolio={portfolio} />
       </div>
+      <Chatbot />
     </main>
   );
 }

@@ -1,0 +1,127 @@
+[
+  {
+    "id": "bio-1",
+    "data": "Muhammad Fadhil Pradipta is a fresh graduate in Informatics Engineering from Brawijaya University, based in Malang, Indonesia. He can be reached by phone at +62 813-1561-6521, email fadhilmedsos@gmail.com, and LinkedIn linkedin.com/in/fadhilprdipta.",
+    "metadata": { "category": "bio" }
+  },
+  {
+    "id": "bio-2",
+    "data": "Fadhil specializes in Machine Learning, Computer Vision, Natural Language Processing (NLP), and full-stack software development. He has a proven track record of delivering end-to-end technical solutions, from a production-ready face-recognition attendance platform to medical-record NLP pipelines and cloud-secured architectures, built across 1 industry internship, 6+ independent projects, and 2 national competition placements.",
+    "metadata": { "category": "bio" }
+  },
+  {
+    "id": "bio-3",
+    "data": "Fadhil is skilled in Python, deep learning frameworks, REST API design, and MLOps practices, with strong analytical thinking and cross-functional leadership honed through campus organizations and competitions. He is seeking to apply his technical execution and problem-solving ability in a Machine Learning/AI Engineer, Software Engineer, Data Analyst, or Management Trainee role.",
+    "metadata": { "category": "bio" }
+  },
+  {
+    "id": "exp-1",
+    "data": "Fadhil worked as a Full-Stack Engineer Intern at PT Bumi Siak Pusako from July 2025 to September 2025. He delivered a production-ready, multi-platform employee attendance system (Tkinter desktop app, Flutter mobile app, Flask REST API, and web dashboard) by engineering a unified Face Recognition pipeline, enabling real-time attendance tracking across 4 integrated client platforms.",
+    "metadata": { "category": "work_experience" }
+  },
+  {
+    "id": "exp-2",
+    "data": "During his internship at PT Bumi Siak Pusako, Fadhil increased long-term code maintainability and scalability by designing and implementing a Clean Architecture pattern with a dedicated service layer, reducing coupling across the entire application stack.",
+    "metadata": { "category": "work_experience" }
+  },
+  {
+    "id": "exp-3",
+    "data": "Fadhil enabled secure, real-time employee registration and attendance logging for the full workforce by integrating a PostgreSQL database with a live facial-recognition engine.",
+    "metadata": { "category": "work_experience" }
+  },
+  {
+    "id": "exp-4",
+    "data": "Fadhil reduced integration effort between mobile and back-end systems by building RESTful APIs that standardized data exchange across all client applications.",
+    "metadata": { "category": "work_experience" }
+  },
+  {
+    "id": "exp-5",
+    "data": "Fadhil improved HR decision-making visibility by developing a monitoring dashboard surfacing attendance logs, employee management tools, department-level statistics, and data visualizations.",
+    "metadata": { "category": "work_experience" }
+  },
+  {
+    "id": "exp-6",
+    "data": "Fadhil shortened environment setup and deployment time by containerizing the full application stack with Docker, standardizing configuration across development and production environments.",
+    "metadata": { "category": "work_experience" }
+  },
+  {
+    "id": "project-1",
+    "data": "Sensitive Entity Detection in Medical Records (XLM-RoBERTa NER), September 2025 – April 2026. Fadhil fine-tuned and evaluated an XLM-RoBERTa Named Entity Recognition model to detect sensitive entities in unstructured medical-record PDFs, resolving severe class imbalance and validating results via precision, recall, and F1-score.",
+    "metadata": { "category": "project" }
+  },
+  {
+    "id": "project-2",
+    "data": "Dishcovery — Recipe Recommendation Web App & AI Chatbot, February 2025 – June 2025. Fadhil built a full-stack Indonesian recipe recommendation platform matching user-supplied ingredients against thousands of recipes, implementing TF-IDF vectorization with Cosine Similarity and integrating a local LLM (via Ollama) for conversational, context-aware cooking assistance.",
+    "metadata": { "category": "project" }
+  },
+  {
+    "id": "project-3",
+    "data": "DynamicBERTopic — Dynamic Topic Modeling Pipeline, February 2025 – June 2025. Fadhil improved experiment reproducibility and monitoring efficiency by architecting an end-to-end MLOps pipeline (BERTopic) that automated data preprocessing and NLP workflows, generating interactive HTML dashboards for real-time topic-trend analytics.",
+    "metadata": { "category": "project" }
+  },
+  {
+    "id": "project-4",
+    "data": "Zero Trust Network Access (ZTNA) for Medical Records, February 2025 – July 2025. Fadhil hardened data-storage security for sensitive medical records across 2 AWS EC2 instances by designing and deploying a Zero Trust Network Access architecture, containerizing Nginx, PostgreSQL, and Node.js services with Docker, and isolating traffic through NetBird's private overlay network.",
+    "metadata": { "category": "project" }
+  },
+  {
+    "id": "project-5",
+    "data": "Damaged Road Image Classification (Neural Network from Scratch), October 2024 – December 2024. Fadhil built a single-hidden-layer neural network from scratch in pure NumPy to classify highway road damage from image data, implementing custom forward/backward propagation, binary cross-entropy loss, and sigmoid activation, then validated results via accuracy, confusion matrix, precision, recall, and F1-score with a real-time prediction visualizer.",
+    "metadata": { "category": "project" }
+  },
+  {
+    "id": "project-6",
+    "data": "Human Pose Classification — CNN vs. Random Forest, October 2023 – December 2023. Fadhil benchmarked deep learning against traditional machine learning by training and evaluating CNN and Random Forest models on approximately 25,000 images and over 40,000 joint-keypoint annotations from the MPII Human Pose Dataset, executing end-to-end preprocessing and feature extraction across multiple activity classes.",
+    "metadata": { "category": "project" }
+  },
+  {
+    "id": "honor-1",
+    "data": "Finalist, Infographic Poster — 4C National Competition (FILKOM UB), November 2024. Fadhil was selected as a national finalist among competing teams by designing a data-driven infographic analyzing 5 years of Indonesian workplace-accident trends, applying clustering for geographic mapping and time-series forecasting, and proposing an AI-driven CCTV system for real-time PPE detection.",
+    "metadata": { "category": "honors_and_awards" }
+  },
+  {
+    "id": "honor-2",
+    "data": "2nd Place, International Business Plan Competition — ECOFEST 2024 (FEB UPNVJ), February 2024. Fadhil won 2nd place among competing teams by conceiving and developing FixFlare, an automotive-service business plan featuring an online mechanic-booking platform with UI/UX prototypes connecting vehicle owners to certified local mechanics.",
+    "metadata": { "category": "honors_and_awards" }
+  },
+  {
+    "id": "edu-1",
+    "data": "Fadhil is pursuing a B.Eng. in Informatics Engineering at Brawijaya University, Faculty of Computer Science, Malang, Indonesia, from August 2022 to July 2026. Relevant coursework includes Machine Learning, Natural Language Processing, Image Processing, Artificial Intelligence, Data Structures & Algorithms, Web Development, Database Management (MySQL & PostgreSQL), Operating Systems, and Computer Networks.",
+    "metadata": { "category": "education" }
+  },
+  {
+    "id": "cert-1",
+    "data": "Fadhil earned the AWS Academy Graduate — AWS Academy Data Engineering certification from Amazon Web Services in May 2025.",
+    "metadata": { "category": "certifications" }
+  },
+  {
+    "id": "cert-2",
+    "data": "Fadhil earned the Google Analytics Certification from Google Digital Academy / Skillshop in August 2026.",
+    "metadata": { "category": "certifications" }
+  },
+  {
+    "id": "cert-3",
+    "data": "Fadhil completed the 'Belajar Machine Learning untuk Pemula' (Learning Machine Learning for Beginners) course from Dicoding Indonesia in October 2025.",
+    "metadata": { "category": "certifications" }
+  },
+  {
+    "id": "cert-4",
+    "data": "Fadhil completed the 'Belajar Dasar Visualisasi Data & Pemrograman dengan Python' (Learning the Basics of Data Visualization & Programming with Python) course from Dicoding Indonesia in July 2025.",
+    "metadata": { "category": "certifications" }
+  },
+  {
+    "id": "skills-1",
+    "data": "Fadhil's programming languages include Python, JavaScript, and SQL. In Machine Learning & Data, he is skilled in Machine Learning, Deep Learning, Natural Language Processing (NLP), Computer Vision, Data Analysis, and MLOps.",
+    "metadata": { "category": "skills" }
+  },
+  {
+    "id": "skills-2",
+    "data": "Fadhil's frameworks, tools, and platforms include Flask, Laravel, Flutter, REST API, Docker, AWS, Git/GitHub, PostgreSQL, MySQL, NetBird, and Postman. For productivity and design, he is proficient in Microsoft Office, Google Workspace, Visual Studio Code, and Canva.",
+    "metadata": { "category": "skills" }
+  },
+  {
+    "id": "skills-3",
+    "data": "Fadhil's soft skills include Problem Solving, Critical Thinking, Leadership, Teamwork, Time Management, Adaptability, Project Coordination, and Analytical Thinking. He is a native speaker of Indonesian and has Professional Working Proficiency in English.",
+    "metadata": { "category": "skills" }
+  }
+]
