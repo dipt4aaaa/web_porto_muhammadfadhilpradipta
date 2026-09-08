@@ -27,7 +27,6 @@ const vectorIndex = new Index({
 
 async function retrieveContext(question: string) {
   try {
-    // Tarik vector query dengan topK lebih luas
     const matches = await vectorIndex.query({
       data: question,
       topK: 12,
@@ -39,13 +38,16 @@ async function retrieveContext(question: string) {
       return '';
     }
 
-    // Ambil data tanpa membuang chunk dengan skor rendah (biar proyek non-magang ikut kebawa)
-    const contextData = matches
+    return matches
       .filter((match) => typeof match.data === 'string')
-      .map((match) => match.data)
+      .map((match) => {
+        const textData = match.data as string;
+        // Clean HTML <br> tags from vector data raw string
+        return textData
+          .replace(/<br\s*\/?>/gi, '\n') // Ubah <br> atau <br/> jadi newline
+          .replace(/&nbsp;/g, ' ');     // Ubah non-breaking space jadi spasi biasa
+      })
       .join('\n\n---\n\n');
-
-    return contextData;
   } catch (error) {
     console.error('Error during vector context retrieval:', error);
     return '';
