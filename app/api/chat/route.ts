@@ -135,7 +135,7 @@ ${context || 'No specific relevant context was found in the database.'}`;
       body: JSON.stringify({
         model: 'openai/gpt-oss-20b',
         temperature: 0.1, 
-        max_tokens: 500,
+        max_tokens: 3000,
         messages: [
           {
             role: 'system',
