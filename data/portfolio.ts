@@ -87,10 +87,10 @@ export type PortfolioData = {
 export const portfolio: PortfolioData = {
   name: 'Muhammad Fadhil Pradipta',
   profileImage,
-  role: 'Informatics Engineering Undergraduate',
+  role: 'Informatics Engineering Fresh Graduate',
   headline: 'AI • Machine Learning • Data Science • Full-Stack Developer',
   summary:
-    'A detail-oriented and ambitious Informatics Engineering undergraduate student at Brawijaya University with strong expertise in Machine Learning, AI, Data Science, and Software Development. Experienced in developing end-to-end technical solutions ranging from face recognition attendance systems to full-stack web applications.',
+    'A detail-oriented and ambitious Informatics Engineering Fresh Graduate at Brawijaya University with strong expertise in Machine Learning, AI, Data Science, and Software Development. Experienced in developing end-to-end technical solutions ranging from face recognition attendance systems to full-stack web applications.',
   contact: {
     phone: '+62 813-1561-6521',
     email: 'fadhilmedsos@gmail.com',
@@ -124,7 +124,7 @@ export const portfolio: PortfolioData = {
   experience: [
     {
       company: 'PT Bumi Siak Pusako',
-      title: 'System Administrator Internship',
+      title: 'Fullstack & AI Internship',
       period: 'Jul 2025 – Sep 2025',
       image: bumisiakpusakointernImage,
       githubUrl: 'https://github.com/dipt4aaaa/ProjectBSP',
