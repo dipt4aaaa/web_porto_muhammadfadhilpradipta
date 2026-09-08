@@ -3,6 +3,8 @@
 import { FormEvent, useEffect, useRef, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import rehypeRaw from 'rehype-raw';
+import rehypeSanitize from 'rehype-sanitize';
 
 type ChatMessage = {
   role: 'user' | 'assistant';
@@ -105,16 +107,23 @@ export function Chatbot() {
                     <p className="whitespace-pre-wrap">{chatMessage.content}</p>
                   ) : (
                     <div className="prose prose-invert prose-sm max-w-none text-slate-200 
-                      [&>p]:mb-2 [&>p:last-child]:mb-0 
-                      [&>ul]:list-disc [&>ul]:pl-4 [&>ul]:my-1 
-                      [&>ol]:list-decimal [&>ol]:pl-4
-                      [&_.table-wrapper]:my-3 [&_.table-wrapper]:w-full [&_.table-wrapper]:overflow-x-auto [&_.table-wrapper]:rounded-xl [&_.table-wrapper]:border [&_.table-wrapper]:border-slate-800
-                      [&_table]:w-full [&_table]:border-collapse [&_table]:text-xs
-                      [&_th]:bg-slate-800/90 [&_th]:p-2.5 [&_th]:text-left [&_th]:font-semibold [&_th]:text-violet-300 [&_th]:border-b [&_th]:border-slate-800
-                      [&_td]:p-2.5 [&_td]:border-b [&_td]:border-slate-800/50 [&_td]:align-top [&_td]:text-slate-300"
+                    [&>p]:mb-2.5 [&>p:last-child]:mb-0 
+                    [&>ul]:list-disc [&>ul]:pl-5 [&>ul]:my-2 [&>ul>li]:mb-1
+                    [&>ol]:list-decimal [&>ol]:pl-5 [&>ol]:my-2 [&>ol>li]:mb-1
+                    [&_.table-wrapper]:my-3 [&_.table-wrapper]:w-full [&_.table-wrapper]:overflow-x-auto [&_.table-wrapper]:rounded-xl [&_.table-wrapper]:border [&_.table-wrapper]:border-slate-800 [&_.table-wrapper]:bg-slate-950/50
+                    [&_table]:w-full [&_table]:border-collapse [&_table]:text-xs
+                    [&_th]:bg-slate-800/90 [&_th]:p-3 [&_th]:text-left [&_th]:font-semibold [&_th]:text-violet-300 [&_th]:border-b [&_th]:border-slate-700/80 [&_th]:whitespace-nowrap
+                    [&_td]:p-3 [&_td]:border-b [&_td]:border-slate-800/80 [&_td]:align-top [&_td]:text-slate-300 [&_td]:leading-relaxed
+                    [&_tr:last-child_td]:border-b-0
+                    [&_tr:nth-child(even)]:bg-slate-900/40"
                     >
                       <ReactMarkdown
                         remarkPlugins={[remarkGfm]}
+                        // rehypeRaw lets literal <br> tags inside table cells (or anywhere else)
+                        // actually render as line breaks instead of being stripped or shown as plain text.
+                        // rehypeSanitize runs right after to strip anything unsafe, since the content
+                        // technically comes from an LLM response.
+                        rehypePlugins={[rehypeRaw, rehypeSanitize]}
                         components={{
                           table: ({ node, ...props }) => (
                             <div className="table-wrapper">

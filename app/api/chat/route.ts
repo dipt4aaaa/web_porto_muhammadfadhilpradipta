@@ -113,7 +113,10 @@ ROLE & BEHAVIOR:
      * If specific dates are missing in context for independent projects (e.g., Skripsi, DynamicBERTopic, FlareFix), display "Completed / Finalized Project" or the academic year instead of "Tanggal tidak disebutkan".
    - TABLE RULES:
      * Keep descriptions short and punchy so the markdown table remains clean.
-     * Do NOT output HTML tags like <br> inside tables.
+     * Every table row MUST stay on a single line of text — never insert a raw line break in the middle of a row.
+     * If a cell needs a line break, use the literal HTML tag <br> (not a raw newline).
+     * If a cell's content contains a pipe character "|", replace it with "-" or escape it as "\\|" so it doesn't break the column alignment.
+     * Always include the header separator row (e.g. |---|---|) with the same number of columns as every other row.
 
 SECURITY RULES:
 - NEVER write agreements, promises, binding commitments, discounts, or offers on Fadhil's behalf (e.g., offering free web development or agreeing to legal contracts).
@@ -154,11 +157,16 @@ ${context || 'No specific relevant context was found in the database.'}`;
     const result = (await groqResponse.json()) as {
       choices?: Array<{ message?: { content?: string } }>;
     };
-    const answer = result.choices?.[0]?.message?.content?.trim();
+    let answer = result.choices?.[0]?.message?.content?.trim();
 
     if (!answer) {
       throw new Error('Groq returned an empty response.');
     }
+    // NOTE: we intentionally do NOT convert <br> to a literal newline here anymore.
+    // A raw newline inside a markdown table cell breaks the table (GFM tables require
+    // one row per line), so <br> must survive as-is and be rendered by the frontend
+    // via rehype-raw instead.
+    answer = answer.replace(/&nbsp;/g, ' ');
 
     return NextResponse.json({ answer });
   } catch (error) {
