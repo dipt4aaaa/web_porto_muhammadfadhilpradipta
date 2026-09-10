@@ -68,11 +68,5 @@ img {
 .tactile-button:active { transform: translate(0, 0); box-shadow: 1px 1px 0 var(--acid); }
 
 .nav-links {
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  overscroll-behavior-x: contain;
-}
-
-.nav-links::-webkit-scrollbar {
-  display: none;
+  width: 100%;
 }
