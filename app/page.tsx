@@ -5,11 +5,13 @@ import { ExperienceSection } from '../components/ExperienceSection';
 import { HeroSection } from '../components/HeroSection';
 import { ProjectsSection } from '../components/ProjectsSection';
 import { RecognitionSection } from '../components/RecognitionSection';
+import { Navbar } from '../components/Navbar';
 import { portfolio } from '../data/portfolio';
 
 export default function Page() {
   return (
-    <main className="min-h-screen bg-slate-950 text-slate-100">
+    <main className="min-h-screen bg-black-grain text-slate-100">
+      <Navbar />
       <div className="mx-auto max-w-7xl px-0">
         <HeroSection portfolio={portfolio} />
         <AboutSection portfolio={portfolio} />

@@ -92,7 +92,7 @@ export const portfolio: PortfolioData = {
   summary:
     'A detail-oriented and ambitious Informatics Engineering Fresh Graduate at Brawijaya University with strong expertise in Machine Learning, AI, Data Science, and Software Development. Experienced in developing end-to-end technical solutions ranging from face recognition attendance systems to full-stack web applications.',
   contact: {
-    phone: '+62 813-1561-6521',
+    phone: '+62 813-1581-6521',
     email: 'fadhilmedsos@gmail.com',
     linkedin: 'https://linkedin.com/in/fadhilprdipta',
   },

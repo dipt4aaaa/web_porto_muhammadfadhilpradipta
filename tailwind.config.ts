@@ -5,13 +5,16 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        surface: '#0f172a',
-        panel: '#111827',
-        accent: '#7c3aed',
-        accentSoft: '#a78bfa',
+        'black-grain': '#0a0a0a',
+        offwhite: '#f2f2f2',
+        acid: '#c7ff3d',
+        surface: '#121212',
+        panel: '#181818',
+        accent: '#c7ff3d',
+        accentSoft: '#dfff83',
       },
       boxShadow: {
-        glow: '0 0 40px rgba(124, 58, 237, 0.24)',
+        glow: '0 0 40px rgba(199, 255, 61, 0.18)',
       },
     },
   },

@@ -66,24 +66,24 @@ export function Chatbot() {
   return (
     <div className="fixed bottom-5 right-5 z-50 sm:bottom-6 sm:right-6">
       {isOpen ? (
-        <div className="mb-3 flex h-[min(620px,calc(100vh-7rem))] w-[min(420px,calc(100vw-2rem))] flex-col overflow-hidden rounded-3xl border border-violet-500/20 bg-slate-950/95 backdrop-blur-md shadow-2xl shadow-violet-950/50">
+        <div className="mb-3 flex h-[min(620px,calc(100vh-7rem))] w-[min(420px,calc(100vw-2rem))] flex-col overflow-hidden border border-acid/30 bg-black/95 backdrop-blur-md shadow-2xl shadow-black">
           {/* Header */}
-          <div className="flex items-center justify-between border-b border-slate-800/80 bg-slate-900/90 px-5 py-4">
+          <div className="flex items-center justify-between border-b border-zinc-800 bg-zinc-900/90 px-5 py-4">
             <div className="flex items-center gap-3">
               <div className="relative flex h-2.5 w-2.5">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75"></span>
                 <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-500"></span>
               </div>
               <div>
-                <p className="text-sm font-semibold text-white">Ask Fadhil&apos;s AI</p>
-                <p className="text-[11px] text-slate-400">English & Indonesian</p>
+                <p className="text-sm font-bold uppercase text-offwhite">Ask Fadhil&apos;s AI</p>
+                <p className="text-[11px] text-zinc-500">English & Indonesian</p>
               </div>
             </div>
             <button
               type="button"
               onClick={() => setIsOpen(false)}
               aria-label="Close chatbot"
-              className="rounded-full p-1.5 text-slate-400 transition hover:bg-slate-800 hover:text-white"
+              className="p-1.5 text-zinc-400 transition hover:bg-zinc-800 hover:text-offwhite"
             >
               ✕
             </button>
@@ -99,23 +99,23 @@ export function Chatbot() {
                 <div
                   className={`max-w-[90%] rounded-2xl px-4 py-3 text-sm leading-relaxed ${
                     chatMessage.role === 'user'
-                      ? 'rounded-br-sm bg-violet-600 text-white'
-                      : 'rounded-bl-sm bg-slate-900 text-slate-200 border border-slate-800/80'
+                      ? 'rounded-br-sm bg-acid text-black'
+                      : 'rounded-bl-sm bg-zinc-900 text-zinc-200 border border-zinc-800'
                   }`}
                 >
                   {chatMessage.role === 'user' ? (
                     <p className="whitespace-pre-wrap">{chatMessage.content}</p>
                   ) : (
-                    <div className="prose prose-invert prose-sm max-w-none text-slate-200 
+                    <div className="prose prose-invert prose-sm max-w-none text-zinc-200 
                     [&>p]:mb-2.5 [&>p:last-child]:mb-0 
                     [&>ul]:list-disc [&>ul]:pl-5 [&>ul]:my-2 [&>ul>li]:mb-1
                     [&>ol]:list-decimal [&>ol]:pl-5 [&>ol]:my-2 [&>ol>li]:mb-1
-                    [&_.table-wrapper]:my-3 [&_.table-wrapper]:w-full [&_.table-wrapper]:overflow-x-auto [&_.table-wrapper]:rounded-xl [&_.table-wrapper]:border [&_.table-wrapper]:border-slate-800 [&_.table-wrapper]:bg-slate-950/50
+                    [&_.table-wrapper]:my-3 [&_.table-wrapper]:w-full [&_.table-wrapper]:overflow-x-auto [&_.table-wrapper]:rounded-xl [&_.table-wrapper]:border [&_.table-wrapper]:border-zinc-800 [&_.table-wrapper]:bg-black/30
                     [&_table]:w-full [&_table]:border-collapse [&_table]:text-xs
-                    [&_th]:bg-slate-800/90 [&_th]:p-3 [&_th]:text-left [&_th]:font-semibold [&_th]:text-violet-300 [&_th]:border-b [&_th]:border-slate-700/80 [&_th]:whitespace-nowrap
-                    [&_td]:p-3 [&_td]:border-b [&_td]:border-slate-800/80 [&_td]:align-top [&_td]:text-slate-300 [&_td]:leading-relaxed
+                    [&_th]:bg-zinc-800/90 [&_th]:p-3 [&_th]:text-left [&_th]:font-semibold [&_th]:text-acid [&_th]:border-b [&_th]:border-zinc-700/80 [&_th]:whitespace-nowrap
+                    [&_td]:p-3 [&_td]:border-b [&_td]:border-zinc-800/80 [&_td]:align-top [&_td]:text-zinc-300 [&_td]:leading-relaxed
                     [&_tr:last-child_td]:border-b-0
-                    [&_tr:nth-child(even)]:bg-slate-900/40"
+                    [&_tr:nth-child(even)]:bg-zinc-900/40"
                     >
                       <ReactMarkdown
                         remarkPlugins={[remarkGfm]}
@@ -143,10 +143,10 @@ export function Chatbot() {
             {/* Typing Indicator */}
             {isLoading && (
               <div className="flex justify-start">
-                <div className="flex items-center gap-1.5 rounded-2xl rounded-bl-sm border border-slate-800 bg-slate-900 px-4 py-3">
-                  <span className="h-2 w-2 animate-bounce rounded-full bg-violet-400 [animation-delay:-0.32s]"></span>
-                  <span className="h-2 w-2 animate-bounce rounded-full bg-violet-400 [animation-delay:-0.16s]"></span>
-                  <span className="h-2 w-2 animate-bounce rounded-full bg-violet-400"></span>
+                <div className="flex items-center gap-1.5 rounded-2xl rounded-bl-sm border border-slate-800                 bg-zinc-900 px-4 py-3">
+                  <span className="h-2 w-2 animate-bounce rounded-full bg-acid [animation-delay:-0.32s]"></span>
+                  <span className="h-2 w-2 animate-bounce rounded-full bg-acid [animation-delay:-0.16s]"></span>
+                  <span className="h-2 w-2 animate-bounce rounded-full bg-acid"></span>
                 </div>
               </div>
             )}
@@ -156,14 +156,14 @@ export function Chatbot() {
           </div>
 
           {/* Footer Input */}
-          <div className="border-t border-slate-800/80 bg-slate-950 p-4">
+          <div className="border-t border-zinc-800 bg-black p-4">
             <div className="mb-3 flex flex-wrap gap-1.5">
               {suggestions.map((suggestion) => (
                 <button
                   key={suggestion}
                   type="button"
                   onClick={() => void sendMessage(undefined, suggestion)}
-                  className="rounded-full border border-slate-800 bg-slate-900/50 px-3 py-1 text-xs text-slate-300 transition hover:border-violet-500/50 hover:bg-violet-500/10 hover:text-violet-200"
+                  className="border border-zinc-800 bg-zinc-900/50 px-3 py-1 text-xs text-zinc-300 transition hover:border-acid/50 hover:bg-acid/10 hover:text-acid"
                 >
                   {suggestion}
                 </button>
@@ -176,12 +176,12 @@ export function Chatbot() {
                 maxLength={1000}
                 placeholder="Ask something..."
                 aria-label="Chat message"
-                className="min-w-0 flex-1 rounded-xl border border-slate-800 bg-slate-900/80 px-3.5 py-2.5 text-sm text-white outline-none transition placeholder:text-slate-500 focus:border-violet-500 focus:ring-1 focus:ring-violet-500"
+                className="min-w-0 flex-1 border border-zinc-800 bg-zinc-900/80 px-3.5 py-2.5 text-sm text-white outline-none transition placeholder:text-zinc-500 focus:border-acid focus:ring-1 focus:ring-acid"
               />
               <button
                 type="submit"
                 disabled={isLoading || !message.trim()}
-                className="rounded-xl bg-violet-600 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-violet-500 active:scale-95 disabled:cursor-not-allowed disabled:opacity-40"
+                className="tactile-button bg-acid px-4 py-2.5 text-sm font-black uppercase text-black active:scale-95 disabled:cursor-not-allowed disabled:opacity-40"
               >
                 Send
               </button>
@@ -193,7 +193,7 @@ export function Chatbot() {
         <button
           type="button"
           onClick={() => setIsOpen(true)}
-          className="flex items-center gap-2.5 rounded-full border border-violet-400/30 bg-violet-600 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-violet-950/40 transition hover:bg-violet-500 hover:scale-105 active:scale-95"
+          className="tactile-button flex items-center gap-2.5 border border-acid/50 bg-acid px-5 py-3 text-sm font-black uppercase text-black shadow-lg shadow-black transition active:scale-95"
         >
           <svg
             className="h-5 w-5 text-white"
