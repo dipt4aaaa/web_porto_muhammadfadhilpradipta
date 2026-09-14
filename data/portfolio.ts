@@ -154,7 +154,7 @@ export const portfolio: PortfolioData = {
       period: 'Feb 2025 – Jun 2025',
       description:
         'Built an Indonesian recipe recommendation web app using TF-IDF and Cosine Similarity, combined with an Ollama-powered local LLM chatbot for conversational assistance.',
-      tech: ['TF-IDF', 'Cosine Similarity', 'Ollama', 'Flask', 'JavaScript'],
+      tech: ['TF-IDF', 'Cosine Similarity', 'Ollama', 'Flask', 'Python', 'Docker'],
       image: dishcoveryImage,
       githubUrl: 'https://github.com/dipt4aaaa/Dishcovery_Capstone',
       liveUrl: '',
