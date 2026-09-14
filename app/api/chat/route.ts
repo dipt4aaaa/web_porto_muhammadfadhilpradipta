@@ -172,7 +172,7 @@ ${context || 'No relevant portfolio context was found.'}`;
       console.error('Groq API Error Detail:', errorText);
       if (groqResponse.status === 429) {
         return NextResponse.json(
-          { error: 'AI usage limit reached. Please try again later.' },
+          { error: 'Layanan AI sedang mencapai kapasitas maksimum. Mohon tunggu beberapa saat sebelum mencoba kembali.' },
           { status: 429 },
         );
       }
