@@ -235,7 +235,7 @@ Rules:
     // --- 2. Context Dinamis Hasil Query Vector ---
     const dynamicContextMessage = `Retrieved Portfolio Context:\n${context || 'No relevant portfolio context was found.'}`;
 
-    // Panggil API Groq dengan Qwen 3.6
+    // Panggil API Groq dengan Qwen 3.8
     const groqResponse = await fetch('https://api.groq.com/openai/v1/chat/completions', {
       method: 'POST',
       headers: {
@@ -243,7 +243,7 @@ Rules:
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        model: 'qwen/qwen3.6-27b', // Menggunakan Qwen 3.6 27B
+        model: 'qwen/qwen3.8-27b', // Menggunakan Qwen 3.6 27B
         temperature: 0.1, 
         max_tokens: 900,
         reasoning_effort: 'none',
