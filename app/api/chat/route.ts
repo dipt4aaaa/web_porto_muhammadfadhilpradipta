@@ -15,9 +15,9 @@ type PortfolioChunk = {
   };
 };
 
-const MAX_MESSAGE_LENGTH = 1200;
-const MAX_HISTORY_MESSAGES = 8;
-const MAX_HISTORY_MESSAGE_LENGTH = 800;
+const MAX_MESSAGE_LENGTH = 2000;
+const MAX_HISTORY_MESSAGES = 6;
+const MAX_HISTORY_MESSAGE_LENGTH = 500;
 const MAX_CATEGORY_MATCHES = 20;
 
 // --- Intent Patterns ---
